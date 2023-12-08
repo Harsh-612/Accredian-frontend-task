@@ -18,9 +18,13 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import ErrorOutlineIcon from "@mui/icons-material/Error";
 
+// TS props for typesafety
+
 interface RegisterProps {
   onTogglePage: () => void;
 }
+
+//Styled components
 
 const StyledCard = styled(Card)({
   padding: "40px",
@@ -51,6 +55,8 @@ const App: React.FC<RegisterProps> = ({ onTogglePage }) => {
 
   const isPasswordMatch = password === confirmPassword;
   const isPasswordValid = password.length > 7;
+
+  //onChange Handlers
 
   const handlePasswordChange = (value: string) => {
     setPassword(value);
